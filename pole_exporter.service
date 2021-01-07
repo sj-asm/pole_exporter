@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus exporter for metrics, collected at Electricity pole
+
+[Service]
+Restart=always
+User=root
+ExecStart=/usr/bin/python3 /usr/local/bin/pole_exporter.py
+
+[Install]
+WantedBy=multi-user.target
